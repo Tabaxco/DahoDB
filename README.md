@@ -2,14 +2,14 @@
 A lightweight, containerized E-Commerce management system built in **Java**.\
 This project demonstrates a raw implementation of an MVC architecture without relying on heavy frameworks like Spring Boot. It includes a fully Dockerized environment for easy deployment and database management.
 
-### Tech Stack:
+### 🛠️ Tech Stack:
 ---
 * **Language:** Java (JDK 21 or later recommended)
 * **Build Tool:** Maven
 * **Database:** PostgreSQL 16
 * *Infrastructure:* Docker & Docker Compose
 
-### How to run:
+### 📦 How to run:
 ---
 You do not need to install Java or PostgreSQL locally. You only need Docker.
 
