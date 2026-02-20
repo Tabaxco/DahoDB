@@ -13,46 +13,6 @@ public class Employee extends User{
         this.role = role;
     }
 
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public String getTelephoneNumber() {
-        return super.getTelephoneNumber();
-    }
-
-    @Override
-    public void setTelephoneNumber(String telNumber) {
-        super.setTelephoneNumber(telNumber);
-    }
-
-    @Override
-    public String getEmail() {
-        return super.getEmail();
-    }
-
-    @Override
-    public void setEmail(String email) {
-        super.setEmail(email);
-    }
-
     public String getDepartment() {
         return department;
     }

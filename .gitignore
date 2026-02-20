@@ -30,6 +30,8 @@ buildNumber.properties
 *.tar.gz
 *.rar
 
+*.sh
+
 .env
 
 hs_err_pid*
