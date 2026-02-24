@@ -9,7 +9,7 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public void insert(Customer customer) {
-
+        String sql = "INSERT INTO Customer (Name, Registration_Date) VALUES (?, ?)";
     }
 
     @Override
@@ -19,12 +19,12 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public void update(Customer customer) {
-
+        String sql;
     }
 
     @Override
     public void delete(int id) {
-
+        String sql = "DELETE FROM Customer WHERE Id = ?";
     }
 
 }
