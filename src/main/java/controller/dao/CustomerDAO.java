@@ -1,9 +1,10 @@
 package controller.dao;
 
+import controller.dao.interfaces.GenericDAO;
 import model.Customer;
 import java.sql.*;
 
-public class CustomerDAO extends BaseDAO<Customer> {
+public class CustomerDAO implements GenericDAO<Customer> {
 
 
     @Override

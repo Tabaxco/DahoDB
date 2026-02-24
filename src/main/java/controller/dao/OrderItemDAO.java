@@ -1,8 +1,9 @@
 package controller.dao;
 
+import controller.dao.interfaces.GenericDAO;
 import model.OrderItem;
 
-public class OrderItemDAO extends BaseDAO<OrderItem>{
+public class OrderItemDAO implements GenericDAO<OrderItem> {
 
     @Override
     public void insert(OrderItem orderItem) {

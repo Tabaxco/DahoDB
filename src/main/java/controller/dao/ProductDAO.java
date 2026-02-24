@@ -1,12 +1,16 @@
 package controller.dao;
 
-import jdk.jshell.spi.ExecutionControl;
+import controller.dao.interfaces.GenericDAO;
 import model.Product;
 
-public class ProductDAO extends BaseDAO<Product> {
+import java.sql.*;
+
+
+public class ProductDAO implements GenericDAO<Product> {
 
     @Override
     public void insert(Product product) {
+
 
     }
 

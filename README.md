@@ -6,12 +6,12 @@ This project demonstrates a raw implementation of an MVC architecture without re
 ---
 * **Language:** Java (JDK 21 or later recommended)
 * **Build Tool:** Maven
-* **Database:** PostgreSQL 16
+* **Database:** MySQL 8.0
 * **Infrastructure:** Docker & Docker Compose
 
 ### 📦 How to run:
 ---
-You do not need to install Java or PostgreSQL locally. You only need Docker.
+You do not need to install Java or MySQL locally. You only need Docker.
 
 1. **Clone Repository**
 ``` 

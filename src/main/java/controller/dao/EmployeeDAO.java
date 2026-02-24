@@ -1,10 +1,11 @@
 package controller.dao;
 
+import controller.dao.interfaces.GenericDAO;
 import model.Employee;
 
 import java.sql.SQLException;
 
-public class EmployeeDAO extends BaseDAO<Employee> {
+public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public void insert(Employee employee) {
