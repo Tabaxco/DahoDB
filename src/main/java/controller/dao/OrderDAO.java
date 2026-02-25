@@ -34,7 +34,7 @@ public class OrderDAO implements GenericDAO<Order> {
     @Override
     public void delete(int id) {
 
-        String deleteOrder = "DELETE FROM orders WHERE Id = ?";
-        String deleteOrderItem = "DETELE FROM order_items WHERE Order_Id = ?";
+        String deleteOrderSQL = "DELETE FROM orders WHERE Id = ?";
+        String deleteOrderItemSQL = "DETELE FROM order_items WHERE Order_Id = ?";
     }
 }

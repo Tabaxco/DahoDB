@@ -32,7 +32,9 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM Customer WHERE Id = ?";
+        String deleteCustomerSQL = "DELETE FROM customers WHERE Id = ?";
+        String deleteTelephoneSQL = "DELETE FROM customers_telephones WHERE Customer_Id = ?";
+        String deleteEmailSQL = "DELETE FROM customers_emails WHERE Customer_Id = ?";
     }
 
 }

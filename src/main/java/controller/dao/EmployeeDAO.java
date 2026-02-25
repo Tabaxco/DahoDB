@@ -36,9 +36,9 @@ public class EmployeeDAO implements GenericDAO<Employee> {
     @Override
     public void delete(int id) {
 
-        String deleteEmployee = "DELETE FROM employees WHERE Id = ?";
-        String deleteEmployeeTelephone = "DELETE FROM employee_telephones WHERE Employee_Id = ?";
-        String deleteEmployeeEmail = "DELETE FROM employee_emails WHERE Employee_Id = ?";
+        String deleteEmployeeSQL = "DELETE FROM employees WHERE Id = ?";
+        String deleteEmployeeTelephoneSQL = "DELETE FROM employee_telephones WHERE Employee_Id = ?";
+        String deleteEmployeeEmailSQL = "DELETE FROM employee_emails WHERE Employee_Id = ?";
     }
 
 }
