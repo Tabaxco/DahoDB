@@ -7,7 +7,9 @@ public class OrderDAO implements GenericDAO<Order> {
 
     @Override
     public void insert(Order order) {
-        String sql = "INSERT INTO Order ()";
+
+        String insertOrder = "INSERT INTO Order ()";
+        String insertOrderItem = "INSERT INTO order_items (Order_Id, Customer_Id) VALUES (?,?)";
     }
 
     @Override
@@ -22,6 +24,8 @@ public class OrderDAO implements GenericDAO<Order> {
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM Order WHERE Id = ?";
+
+        String deleteOrder = "DELETE FROM orders WHERE Id = ?";
+        String deleteOrderItem = "DETELE FROM order_items WHERE Order_Id = ?";
     }
 }

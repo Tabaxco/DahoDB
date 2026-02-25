@@ -9,7 +9,9 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public void insert(Customer customer) {
-        String sql = "INSERT INTO Customer (Name, Registration_Date) VALUES (?, ?)";
+        String insertCustomerSQL = "INSERT INTO customers (Id, Name, Registration_Date) VALUES (?, ?)";
+        String insertTelephoneSQL = "INSERT INTO customer_telephones (Id, Telephone_Number) VALUES (?,?)";
+        String insertEmailSQL = "INSERT INTO customer_emails (Id, Email) VALUES (?,?)";
     }
 
     @Override
