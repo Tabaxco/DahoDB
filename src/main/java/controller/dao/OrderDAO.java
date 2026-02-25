@@ -3,6 +3,9 @@ package controller.dao;
 import controller.dao.interfaces.GenericDAO;
 import model.Order;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class OrderDAO implements GenericDAO<Order> {
 
     @Override
@@ -10,6 +13,12 @@ public class OrderDAO implements GenericDAO<Order> {
 
         String insertOrder = "INSERT INTO Order ()";
         String insertOrderItem = "INSERT INTO order_items (Order_Id, Customer_Id) VALUES (?,?)";
+
+        try (Connection conn = ConnectionFactory.getConnection()) {
+
+        } catch(SQLException e) {
+
+        }
     }
 
     @Override

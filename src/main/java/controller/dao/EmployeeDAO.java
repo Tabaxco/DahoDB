@@ -3,6 +3,7 @@ package controller.dao;
 import controller.dao.interfaces.GenericDAO;
 import model.Employee;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public class EmployeeDAO implements GenericDAO<Employee> {
@@ -13,6 +14,13 @@ public class EmployeeDAO implements GenericDAO<Employee> {
         String insertEmployeeSQL = "INSERT INTO employees (Id, Name) VALUES (?, ?)";
         String insertTelephoneSQL = "INSERT INTO employee_telephones (Employee_Id, Telephone) VALUES (?, ?)";
         String insertEmailSQL = "INSERT INTO employee_emails (Employee_Id, Email) VALUES (?,?)";
+
+        try (Connection conn = ConnectionFactory.getConnection()) {
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override

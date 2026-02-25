@@ -11,6 +11,12 @@ public class ProductDAO implements GenericDAO<Product> {
     public void insert(Product product) {
         String insertProductSQL = "INSERT INTO products (Name, Description, Price, Height_cm, Weight_kg) VALUES (?,?,?,?,?)";
         String insertStockSQL = "INSERT INTO stock (Product_Id, Quantity) VALUES (?,?)";
+
+        try (Connection conn = ConnectionFactory.getConnection()) {
+
+        } catch (SQLException e) {
+
+        }
     }
 
     @Override
