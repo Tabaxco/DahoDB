@@ -9,7 +9,7 @@ public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public void insert(Employee employee) {
-
+        String sql = "INSERT INTO Employee (Name) VALUES (?)";
     }
 
     @Override
@@ -19,12 +19,12 @@ public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public void update(Employee employee) {
-
+        String sql;
     }
 
     @Override
     public void delete(int id) {
-
+        String sql = "DELETE FROM Employee WHERE Id = ?";
     }
 
 }

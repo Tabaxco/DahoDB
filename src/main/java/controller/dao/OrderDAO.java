@@ -7,7 +7,7 @@ public class OrderDAO implements GenericDAO<Order> {
 
     @Override
     public void insert(Order order) {
-
+        String sql = "INSERT INTO Order ()";
     }
 
     @Override
@@ -17,11 +17,11 @@ public class OrderDAO implements GenericDAO<Order> {
 
     @Override
     public void update(Order order) {
-
+        String sql;
     }
 
     @Override
     public void delete(int id) {
-
+        String sql = "DELETE FROM Order WHERE Id = ?";
     }
 }
