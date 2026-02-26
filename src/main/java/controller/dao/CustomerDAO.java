@@ -9,7 +9,7 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public void insert(Customer customer) {
-        String insertCustomerSQL = "INSERT INTO customers (Id, Name, Registration_Date) VALUES (?, ?)";
+        String insertCustomerSQL = "INSERT INTO users (Id, Name, Registration_Date) VALUES (?, ?)";
         String insertTelephoneSQL = "INSERT INTO customer_telephones (Id, Telephone_Number) VALUES (?,?)";
         String insertEmailSQL = "INSERT INTO customer_emails (Id, Email) VALUES (?,?)";
 
@@ -27,7 +27,7 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public Customer findById(int id) {
-        String findCustomerSQL = "SELECT FROM customers WHERE Id = ?";
+        String findCustomerSQL = "SELECT FROM users WHERE Id = ?";
         String findTelephoneSQL = "SELECT FROM telephones WHERE User_Id = ?";
         String findEmailSQL = "SELECT FROM emails WHERE User_Id = ?";
         return null;
@@ -40,7 +40,7 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public void delete(int id) {
-        String deleteCustomerSQL = "DELETE FROM customers WHERE Id = ?";
+        String deleteCustomerSQL = "DELETE FROM users WHERE Id = ?";
         String deleteTelephoneSQL = "DELETE FROM customers_telephones WHERE Customer_Id = ?";
         String deleteEmailSQL = "DELETE FROM customers_emails WHERE Customer_Id = ?";
     }

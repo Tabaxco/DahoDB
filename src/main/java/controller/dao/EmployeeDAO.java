@@ -13,9 +13,9 @@ public class EmployeeDAO implements GenericDAO<Employee> {
     @Override
     public void insert(Employee employee) {
 
-        String insertEmployeeSQL = "INSERT INTO employees (Id, Name) VALUES (?, ?)";
-        String insertTelephoneSQL = "INSERT INTO employee_telephones (Employee_Id, Telephone) VALUES (?, ?)";
-        String insertEmailSQL = "INSERT INTO employee_emails (Employee_Id, Email) VALUES (?,?)";
+        String insertEmployeeSQL = "INSERT INTO users (Id, Name) VALUES (?, ?)";
+        String insertTelephoneSQL = "INSERT INTO telephones (Employee_Id, Telephone) VALUES (?, ?)";
+        String insertEmailSQL = "INSERT INTO emails (Employee_Id, Email) VALUES (?,?)";
 
         try (Connection conn = ConnectionFactory.getConnection()) {
             conn.setAutoCommit(false);
@@ -31,7 +31,7 @@ public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public Employee findById(int id) {
-        String findEmployee = "SELECT FROM employees WHERE Id = ?";
+        String findEmployee = "SELECT FROM users WHERE Id = ?";
         String findTelephonesSQL = "SELECT FROM telephones WHERE User_Id = ?";
         String findEmailSQL = "SELECT FROM emails WHERE User_Id = ?";
         return null;
@@ -45,9 +45,9 @@ public class EmployeeDAO implements GenericDAO<Employee> {
     @Override
     public void delete(int id) {
 
-        String deleteEmployeeSQL = "DELETE FROM employees WHERE Id = ?";
-        String deleteEmployeeTelephoneSQL = "DELETE FROM employee_telephones WHERE Employee_Id = ?";
-        String deleteEmployeeEmailSQL = "DELETE FROM employee_emails WHERE Employee_Id = ?";
+        String deleteEmployeeSQL = "DELETE FROM users WHERE Id = ?";
+        String deleteEmployeeTelephoneSQL = "DELETE FROM telephones WHERE Employee_Id = ?";
+        String deleteEmployeeEmailSQL = "DELETE FROM emails WHERE Employee_Id = ?";
     }
 
 }
