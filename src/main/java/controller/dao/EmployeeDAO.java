@@ -4,7 +4,9 @@ import controller.dao.interfaces.GenericDAO;
 import model.Employee;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class EmployeeDAO implements GenericDAO<Employee> {
 
@@ -16,7 +18,11 @@ public class EmployeeDAO implements GenericDAO<Employee> {
         String insertEmailSQL = "INSERT INTO employee_emails (Employee_Id, Email) VALUES (?,?)";
 
         try (Connection conn = ConnectionFactory.getConnection()) {
-
+            conn.setAutoCommit(false);
+            try(PreparedStatement stmtEmployee = conn.prepareStatement(insertEmployeeSQL, Statement.RETURN_GENERATED_KEYS)) {
+                stmtEmployee.setInt(1, employee.getId());
+                stmtEmployee.setString(2, employee.getName());
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

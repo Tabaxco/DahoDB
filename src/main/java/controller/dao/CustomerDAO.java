@@ -14,7 +14,12 @@ public class CustomerDAO implements GenericDAO<Customer> {
         String insertEmailSQL = "INSERT INTO customer_emails (Id, Email) VALUES (?,?)";
 
         try (Connection conn = ConnectionFactory.getConnection()) {
+            conn.setAutoCommit(false);
 
+            try(PreparedStatement stmtCustomer = conn.prepareStatement(insertCustomerSQL, Statement.RETURN_GENERATED_KEYS)) {
+                stmtCustomer.setInt(1, customer.getId());
+                stmtCustomer.setString(2, customer.getName());
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

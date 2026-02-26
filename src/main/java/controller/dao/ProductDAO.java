@@ -13,6 +13,15 @@ public class ProductDAO implements GenericDAO<Product> {
         String insertStockSQL = "INSERT INTO stock (Product_Id, Quantity) VALUES (?,?)";
 
         try (Connection conn = ConnectionFactory.getConnection()) {
+            conn.setAutoCommit(false);
+            try (PreparedStatement stmtProduct = conn.prepareStatement(insertProductSQL, Statement.RETURN_GENERATED_KEYS)) {
+                stmtProduct.setString(1, product.getProductName());
+                stmtProduct.setString(2, product.getDescription());
+                stmtProduct.setDouble(3, product.getPrice());
+                stmtProduct.setDouble(4, product.getProductHeight());
+                stmtProduct.setDouble(5, product.getProductWeight());
+                stmtProduct.executeUpdate();
+            }
 
         } catch (SQLException e) {
 
