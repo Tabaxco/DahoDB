@@ -13,7 +13,7 @@ public class EmployeeDAO implements GenericDAO<Employee> {
     @Override
     public void insert(Employee employee) {
 
-        String insertEmployeeSQL = "INSERT INTO users (Id, Name) VALUES (?, ?)";
+        String insertEmployeeSQL = "INSERT INTO users (Id, Name, Registration_Date) VALUES (?, ?)";
         String insertTelephoneSQL = "INSERT INTO telephones (Employee_Id, Telephone) VALUES (?, ?)";
         String insertEmailSQL = "INSERT INTO emails (Employee_Id, Email) VALUES (?,?)";
 

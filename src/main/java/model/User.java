@@ -1,10 +1,13 @@
 package model;
 
+import java.time.LocalDate;
+
 abstract class User {
     private int id;
     private String name;
     private String telephoneNumber;
     private String email;
+    private LocalDate registrationDate;
 
     public User () {
     }
@@ -14,6 +17,7 @@ abstract class User {
         this.name = name;
         this.telephoneNumber = telephoneNumber;
         this.email = email;
+        this.registrationDate = LocalDate.now();
     }
 
     public int getId() {
