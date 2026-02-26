@@ -27,6 +27,9 @@ public class CustomerDAO implements GenericDAO<Customer> {
 
     @Override
     public Customer findById(int id) {
+        String findCustomerSQL = "SELECT FROM customers WHERE Id = ?";
+        String findTelephoneSQL = "SELECT FROM telephones WHERE User_Id = ?";
+        String findEmailSQL = "SELECT FROM emails WHERE User_Id = ?";
         return null;
     }
 

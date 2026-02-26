@@ -30,6 +30,7 @@ public class ProductDAO implements GenericDAO<Product> {
 
     @Override
     public Product findById(int id) {
+        String findProductSQL = "SELECT FROM products WHERE Id = ?";
         return null;
     }
 

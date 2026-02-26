@@ -31,12 +31,15 @@ public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public Employee findById(int id) {
+        String findEmployee = "SELECT FROM employees WHERE Id = ?";
+        String findTelephonesSQL = "SELECT FROM telephones WHERE User_Id = ?";
+        String findEmailSQL = "SELECT FROM emails WHERE User_Id = ?";
         return null;
     }
 
     @Override
     public void update(Employee employee) {
-        String sql;
+
     }
 
     @Override
