@@ -31,18 +31,20 @@ public class OrderDAO implements GenericDAO<Order> {
 
     @Override
     public Order findById(int id) {
+        String findOrderSQL = "SELECT FROM orders WHERE Id = ?";
+        String findOrderItem = "SELECT FROM order_items WHERE Order_Id = ?";
         return null;
     }
 
     @Override
     public void update(Order order) {
-        String sql;
+        String updateOrderSQL = "UPDATE orders SET Total_Price = ? WHERE Order_Id = ?";
     }
 
     @Override
     public void delete(int id) {
 
         String deleteOrderSQL = "DELETE FROM orders WHERE Id = ?";
-        String deleteOrderItemSQL = "DETELE FROM order_items WHERE Order_Id = ?";
+        String deleteOrderItemSQL = "DELETE FROM order_items WHERE Order_Id = ?";
     }
 }

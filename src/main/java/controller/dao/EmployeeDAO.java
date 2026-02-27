@@ -13,9 +13,11 @@ public class EmployeeDAO implements GenericDAO<Employee> {
     @Override
     public void insert(Employee employee) {
 
-        String insertEmployeeSQL = "INSERT INTO employees (Id, Name) VALUES (?, ?)";
-        String insertTelephoneSQL = "INSERT INTO employee_telephones (Employee_Id, Telephone) VALUES (?, ?)";
-        String insertEmailSQL = "INSERT INTO employee_emails (Employee_Id, Email) VALUES (?,?)";
+
+        String insertEmployeeSQL = "INSERT INTO users (Id, Name, Registration_Date) VALUES (?, ?)";
+        String insertTelephoneSQL = "INSERT INTO telephones (User_Id, Telephone) VALUES (?, ?)";
+        String insertEmailSQL = "INSERT INTO emails (User_Id, Email) VALUES (?,?)";
+        String inserRole = "INSERT INTO employee_roles (User_Id, Role) VALUES (?,?)";
 
         try (Connection conn = ConnectionFactory.getConnection()) {
             conn.setAutoCommit(false);
@@ -31,21 +33,27 @@ public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public Employee findById(int id) {
+        String findEmployee = "SELECT FROM users WHERE Id = ?";
+        String findTelephonesSQL = "SELECT FROM telephones WHERE User_Id = ?";
+        String findEmailSQL = "SELECT FROM emails WHERE User_Id = ?";
+        String findRoleSQL = "SELECT FROM roles WHERE User_Id = ?";
         return null;
     }
 
     @Override
     public void update(Employee employee) {
         String updateEmployeeSQL = "UPDATE users SET Name = ? WHERE Id = ?";
-        String updateEmployeeSQL = "UPDATE  SET "
+        String updateEmailSQL = "UPDATE emails SET Telephone_Number = ? WHERE User_Id = ?";
+        String updateTelephoneSQL = "UPDATE telephones SET Email = ? WHERE User_Id = ?";
+        String updateRoleSQL = "UPDATE roles SET Role = ? WHERE User_Id = ?";
     }
 
     @Override
     public void delete(int id) {
-
-        String deleteEmployeeSQL = "DELETE FROM employees WHERE Id = ?";
-        String deleteEmployeeTelephoneSQL = "DELETE FROM employee_telephones WHERE Employee_Id = ?";
-        String deleteEmployeeEmailSQL = "DELETE FROM employee_emails WHERE Employee_Id = ?";
+        String deleteEmployeeSQL = "DELETE FROM users WHERE Id = ?";
+        String deleteEmployeeTelephoneSQL = "DELETE FROM telephones WHERE User_Id = ?";
+        String deleteEmployeeEmailSQL = "DELETE FROM emails WHERE User_Id = ?";
+        String deleteRoleSQL = "DELETE FROM roles WHERE User_Id = ?";
     }
 
 }

@@ -30,12 +30,15 @@ public class ProductDAO implements GenericDAO<Product> {
 
     @Override
     public Product findById(int id) {
+        String findProductSQL = "SELECT FROM products WHERE Id = ?";
+        String findStockSQL = "SELECT from stock WHERE Product_Id = ?";
         return null;
     }
 
     @Override
     public void update(Product product) {
-        String sql;
+        String updateProductSQL = "UPDATE products SET Name = ?, Description = ?, Price = ?, Height_cm = ?, Weight_kg = ? WHERE Id = ?";
+        String updateStockSQL = "UPDATE stock SET Quantity = ? WHERE Product_Id = ?";
     }
 
     @Override
