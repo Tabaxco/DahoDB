@@ -36,7 +36,8 @@ public class EmployeeDAO implements GenericDAO<Employee> {
 
     @Override
     public void update(Employee employee) {
-        String sql;
+        String updateEmployeeSQL = "UPDATE users SET Name = ? WHERE Id = ?";
+        String updateEmployeeSQL = "UPDATE  SET "
     }
 
     @Override
