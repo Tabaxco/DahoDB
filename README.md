@@ -1,4 +1,4 @@
-# E-Commerce System
+# DahoDB
 A lightweight, containerized E-Commerce management system built in **Java**.\
 This project demonstrates a raw implementation of an MVC architecture without relying on heavy frameworks like Spring Boot. It includes a fully Dockerized environment for easy deployment and database management.
 
@@ -16,7 +16,7 @@ You do not need to install Java or MySQL locally. You only need Docker.
 1. **Clone Repository**
 ``` 
 git clone https://github.com/GuilhermeLeite/e-commerce.git
-cd e-commerce 
+cd DahoDB
 ```
 
 2. **Build and run**
